@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+import { getTranslations } from '../i18n';
+import type { Locale } from '../data/resume';
+
+interface Props { locale: Locale; title: string; description: string; }
+const { locale, title, description } = Astro.props;
+const { t } = await getTranslations(locale);
+const languageHref = locale === 'es' ? '/en/' : '/';
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#090e0c" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)} />
+    <link rel="alternate" hreflang="es" href="/" />
+    <link rel="alternate" hreflang="en" href="/en/" />
+    <link rel="alternate" hreflang="x-default" href="/" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <main class="shell">
+      <header class="topbar">
+        <a class="terminal-tab" href={locale === 'es' ? '/' : '/en/'} aria-label="Matias Martello home">
+          <span class="tab-dot"></span><span>root@matias-martello:~</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#about">./{t('navAbout')}</a>
+          <a href="#experience">./{t('navExperience')}</a>
+          <a href="#education">./{t('navEducation')}</a>
+          <a href="#projects">./{t('navProjects')}</a>
+        </nav>
+        <a class="language-switch" href={languageHref} hreflang={locale === 'es' ? 'en' : 'es'} aria-label={t('languageLabel')}>
+          <span>⌘</span> {t('language')}
+        </a>
+      </header>
+      <slot />
+      <footer>
+        <span class="prompt-mark">›</span> {t('footer')} <span class="cursor" aria-hidden="true"></span>
+      </footer>
+    </main>
+  </body>
+</html>

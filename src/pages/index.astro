@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Resume from '../components/Resume.astro';
+import { resume } from '../data/resume';
+---
+<BaseLayout locale="es" title={resume.es.meta.title} description={resume.es.meta.description}><Resume locale="es" content={resume.es} /></BaseLayout>
