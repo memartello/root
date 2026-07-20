@@ -1,6 +1,7 @@
 ---
 import type { Locale, ResumeContent, TimelineItem } from '../data/resume';
 import { getTranslations } from '../i18n';
+import profileUrl from '../../assets/profile.jpeg?url';
 
 interface Props { locale: Locale; content: ResumeContent; }
 const { locale, content } = Astro.props;
@@ -15,7 +16,11 @@ const olderExperience = content.experience.slice(3);
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-status"><span class="status-light"></span>{content.profile.availability}</div>
   <p class="eyebrow"><span class="prompt-mark">root@matias-martello:~$</span> {label('prompt')}</p>
-  <h1 id="hero-title">Matias<br /><em>Martello<span class="cursor" aria-hidden="true"></span></em></h1>
+  <h1 id="hero-title">
+    <span class="profile-pixel" aria-hidden="true"><img src={profileUrl} alt="" width="400" height="400" /></span>
+    <span class="name-typewriter" aria-label="Matias Martello"><span data-typewriter aria-hidden="true">Matias</span><br /><em><span data-typewriter aria-hidden="true">Martello</span><span class="cursor" aria-hidden="true"></span></em></span>
+    
+  </h1>
   <div class="hero-grid">
     <div>
       <p class="role">{content.profile.role}</p>
@@ -80,6 +85,28 @@ const olderExperience = content.experience.slice(3);
 </section>
 
 <script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const letters = [...document.querySelectorAll<HTMLElement>('[data-typewriter]')];
+    const text = letters.map((letter) => letter.textContent ?? '');
+    letters.forEach((letter) => { letter.textContent = ''; });
+
+    let word = 0;
+    let character = 0;
+    const writeName = () => {
+      if (word === letters.length) return;
+      letters[word].textContent += text[word][character] ?? '';
+      character += 1;
+      if (character >= text[word].length) {
+        word += 1;
+        character = 0;
+        window.setTimeout(writeName, 170);
+        return;
+      }
+      window.setTimeout(writeName, 92);
+    };
+    window.setTimeout(writeName, 180);
+  }
+
   document.querySelectorAll<HTMLButtonElement>('.copy-button').forEach((button) => {
     button.addEventListener('click', async () => {
       try {

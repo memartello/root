@@ -69,7 +69,7 @@ export const resume: Record<Locale, ResumeContent> = {
   en: {
     meta: { title: 'root@matias-martello — Resume', description: 'Portfolio and resume of Matias Martello.' },
     ui: {
-      prompt: 'resume', navAbout: 'profile', navExperience: 'experience', navEducation: 'education', navProjects: 'projects',
+      prompt: 'whoami', navAbout: 'profile', navExperience: 'experience', navEducation: 'education', navProjects: 'projects',
       commandAbout: 'cat ./profile.md', commandSkills: 'ls ./skills', commandExperience: 'git log --experience',
       commandEducation: 'cat ./education.log', commandProjects: 'find ./projects -maxdepth 1', contact: 'contact',
       copyEmail: 'copy email', copied: 'email copied', cv: 'download CV', cvSoon: 'coming soon', available: 'available',
