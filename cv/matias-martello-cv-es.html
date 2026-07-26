@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matias Martello — CV</title>
+  <style>
+    @page { size: A4; margin: 13mm 15mm 14mm; }
+    :root { --ink:#172426; --muted:#667377; --accent:#0c736d; --soft:#eef4f2; --line:#d5e0de; --gold:#c0924a; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#fff; font-family:"Aptos", "Helvetica Neue", Arial, sans-serif; font-size:9.3pt; line-height:1.42; }
+    .page { width:100%; }
+    .header { display:grid; grid-template-columns:1fr 27mm; align-items:center; gap:9mm; padding:0 0 7mm; border-bottom:2px solid var(--accent); }
+    h1 { margin:0; font-family:Georgia, "Times New Roman", serif; font-size:30pt; letter-spacing:-.04em; line-height:.94; font-weight:700; }
+    .role { margin:2.4mm 0 4mm; color:var(--accent); font-size:10pt; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .contact { display:flex; flex-wrap:wrap; gap:2mm 5mm; color:var(--muted); font-size:8.5pt; }
+    .contact strong { color:var(--ink); font-weight:600; }
+    .photo { width:27mm; height:27mm; border-radius:50%; overflow:hidden; border:1.5mm solid var(--soft); box-shadow:0 0 0 .5mm var(--accent); }
+    .photo img { width:100%; height:100%; object-fit:cover; object-position:center; filter:contrast(1.03) saturate(.86); }
+    .layout { display:grid; grid-template-columns:48mm 1fr; gap:10mm; margin-top:8mm; }
+    .sidebar { padding-right:7mm; border-right:1px solid var(--line); }
+    h2 { margin:0 0 3.2mm; color:var(--accent); font-size:8.5pt; letter-spacing:.14em; text-transform:uppercase; }
+    .section { margin:0 0 7mm; }
+    .summary { margin:0; font-size:9.3pt; line-height:1.55; }
+    .skills { display:flex; flex-wrap:wrap; gap:1.6mm; }
+    .skill { padding:1.2mm 1.8mm; background:var(--soft); border-radius:2px; color:#294447; font-size:7.8pt; }
+    .skill-group + .skill-group { margin-top:4.5mm; }
+    .skill-group h3 { margin:0 0 2mm; font-size:8pt; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.07em; }
+    .item { position:relative; padding:0 0 5mm 5.5mm; border-left:1px solid var(--line); }
+    .item::before { content:""; position:absolute; left:-2px; top:1.2mm; width:3px; height:3px; border-radius:50%; background:var(--gold); }
+    .item:last-child { padding-bottom:0; }
+    .item-head { display:flex; justify-content:space-between; gap:5mm; align-items:baseline; }
+    .item h3 { margin:0; font-size:10.1pt; line-height:1.18; }
+    .company { margin:1mm 0 1.8mm; color:var(--accent); font-weight:700; font-size:8.9pt; }
+    .period { flex:none; color:var(--muted); font-size:8pt; white-space:nowrap; }
+    p { margin:0; } .item p { color:#344247; }
+    ul { margin:1.5mm 0 0; padding-left:4mm; color:#48565a; } li { margin:0 0 .8mm; }
+    .tags { margin-top:2mm; display:flex; flex-wrap:wrap; gap:1.4mm; }
+    .tag { color:var(--muted); font-size:7.4pt; }
+    .tag:not(:last-child)::after { content:"·"; padding-left:1.4mm; color:var(--gold); }
+    .second-page { break-before:page; padding-top:1mm; }
+    .education-item { margin-bottom:4mm; } .education-item h3 { margin:0; font-size:9.2pt; } .education-item p { color:var(--muted); margin-top:.8mm; }
+    .project { padding:3.5mm 0; border-top:1px solid var(--line); } .project:first-of-type { border-top:0; padding-top:0; }
+    .project h3 { margin:0; font-size:9.5pt; } .project-type { color:var(--gold); font-size:8pt; font-weight:700; } .project p { margin-top:1mm; color:#465459; }
+    .footer { margin-top:8mm; padding-top:3mm; border-top:1px solid var(--line); color:var(--muted); font-size:7.5pt; letter-spacing:.04em; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <h1>Matias<br>Martello</h1>
+        <p class="role">Full Stack Developer · Frontend Lead</p>
+        <div class="contact"><span><strong>Buenos Aires, Argentina</strong></span><span>matias.martello@gmail.com</span></div>
+      </div>
+      <div class="photo"><img src="../assets/profile.jpeg" alt="Matias Martello"></div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <section class="section">
+          <h2>Perfil</h2>
+          <p class="summary">Profesional Full Stack con experiencia en arquitectura, liderazgo técnico y desarrollo de productos digitales. Especializado en entender problemas complejos y convertirlos en soluciones eficientes, escalables y centradas en el usuario.</p>
+        </section>
+        <section class="section">
+          <h2>Fortalezas</h2>
+          <div class="skill-group"><h3>Frontend</h3><div class="skills"><span class="skill">React</span><span class="skill">TypeScript</span><span class="skill">Next.js</span><span class="skill">Astro</span><span class="skill">React Native</span><span class="skill">Expo</span><span class="skill">Cypress</span></div></div>
+          <div class="skill-group"><h3>Backend</h3><div class="skills"><span class="skill">Go</span><span class="skill">Node.js</span><span class="skill">NestJS</span><span class="skill">C# / .NET</span><span class="skill">SQL</span></div></div>
+          <div class="skill-group"><h3>DevOps & calidad</h3><div class="skills"><span class="skill">CI/CD</span><span class="skill">Docker</span><span class="skill">Jenkins</span><span class="skill">Nomad</span><span class="skill">Grafana</span><span class="skill">Sentry</span><span class="skill">Observabilidad</span></div></div>
+        </section>
+        <section class="section">
+          <h2>Metodologías</h2>
+          <p class="summary">Agile · Arquitectura de software · Microfrontends · Diseño de APIs · Integración y despliegue continuo · Liderazgo técnico</p>
+        </section>
+      </aside>
+      <section>
+        <h2>Experiencia profesional</h2>
+        <article class="item"><div class="item-head"><h3>Full Stack Founder</h3><span class="period">2026 — Actualidad</span></div><p class="company">Playpeak · Argentina</p><p>Fundador y desarrollador de una aplicación de gestión deportiva que conecta jugadores del mismo deporte y facilita la administración de canchas.</p><ul><li>Diseño y desarrollo integral del producto.</li><li>Funcionalidades para conectar jugadores y gestionar reservas de canchas.</li></ul><div class="tags"><span class="tag">Full Stack</span><span class="tag">Producto</span><span class="tag">Sport Tech</span></div></article>
+        <article class="item"><div class="item-head"><h3>Frontend Lead</h3><span class="period">2023 — 2026</span></div><p class="company">Stonebranch · Remoto</p><p>Liderazgo de un equipo frontend para una solución MFT, creando herramientas específicas para usuarios finales y reduciendo la complejidad de la solución core.</p><ul><li>Experiencias para configurar y mantener nodos.</li><li>Herramientas para administrar canales de comunicación y transferencias.</li></ul><div class="tags"><span class="tag">Frontend</span><span class="tag">MFT</span><span class="tag">Liderazgo</span></div></article>
+        <article class="item"><div class="item-head"><h3>Frontend Lead</h3><span class="period">2022 — 2023</span></div><p class="company">GlobalLogic · Remoto</p><p>Liderazgo de un equipo frontend en una arquitectura avanzada para un cliente de pagos de gran escala.</p><ul><li>Implementación de microfrontends para dividir el trabajo entre equipos.</li><li>Despliegue desacoplado de funcionalidades según requerimientos de negocio.</li></ul><div class="tags"><span class="tag">Microfrontends</span><span class="tag">Payments</span><span class="tag">Liderazgo</span></div></article>
+      </section>
+    </div>
+  </main>
+
+  <main class="page second-page">
+    <section class="section"><h2>Experiencia profesional · Continuación</h2>
+      <article class="item"><div class="item-head"><h3>Full Stack Developer</h3><span class="period">2015 — 2022</span></div><p class="company">Poder Judicial · Argentina</p><p>Desarrollo de una aplicación de alta seguridad para la carga y gestión de causas judiciales, con acceso a información relacionada.</p><ul><li>Flujos seguros para expedientes y datos sensibles.</li><li>Modelado de información relacionada para facilitar la consulta de casos.</li></ul><div class="tags"><span class="tag">Full Stack</span><span class="tag">Seguridad</span><span class="tag">Gestión de casos</span></div></article>
+      <article class="item"><div class="item-head"><h3>Full Stack Developer</h3><span class="period">2014 — 2015</span></div><p class="company">M&G Consultores · Argentina</p><p>Creación y soporte de múltiples aplicaciones C# MVC en contacto directo con clientes finales.</p><ul><li>Relevamiento, entendimiento y refinamiento de requerimientos.</li><li>Mantenimiento y evolución de aplicaciones MVC.</li></ul><div class="tags"><span class="tag">C#</span><span class="tag">MVC</span><span class="tag">Cliente</span></div></article>
+      <article class="item"><div class="item-head"><h3>Full Stack Developer</h3><span class="period">2012 — 2014</span></div><p class="company">Accenture · Argentina</p><p>Testing y desarrollo de aplicaciones siguiendo patrones MVC, con foco en rendimiento y bases de datos relacionales.</p><ul><li>Desarrollo con C#, Windows Forms, ASP.NET, PHP, HTML y JavaScript.</li><li>Optimización de consultas SQL y gestión de bases de datos relacionales.</li></ul><div class="tags"><span class="tag">C#</span><span class="tag">ASP.NET</span><span class="tag">SQL</span></div></article>
+    </section>
+    <div class="layout" style="min-height:0; margin-top:5mm;">
+      <aside class="sidebar">
+        <section class="section"><h2>Educación</h2>
+          <div class="education-item"><h3>Ingeniería en Sistemas</h3><p>UTN FRBA · 2014 — 2022</p></div>
+          <div class="education-item"><h3>Técnico en Electrónica</h3><p>PIO IX Secundario · 2014</p></div>
+          <div class="education-item"><h3>Formación continua</h3><p>Cursos online desde 2014: IA, networking, CI/CD, observabilidad, profiling y técnicas de despliegue.</p></div>
+        </section>
+      </aside>
+      <section><h2>Proyectos destacados</h2>
+        <article class="project"><h3>Playpeak <span class="project-type">· Proyecto personal</span></h3><p>Aplicación web y mobile para gestión de eventos deportivos.</p><div class="tags"><span class="tag">React Native</span><span class="tag">React</span><span class="tag">Go</span><span class="tag">PostgreSQL</span></div></article>
+        <article class="project"><h3>Clubik <span class="project-type">· Proyecto personal</span></h3><p>Aplicación web para reserva y administración de canchas.</p><div class="tags"><span class="tag">Astro</span><span class="tag">React</span><span class="tag">Go</span><span class="tag">PostgreSQL</span></div></article>
+        <article class="project"><h3>MFT Managed File Transfer <span class="project-type">· SaaS</span></h3><p>Sistema empresarial de transferencia de archivos con encriptación y auditoría.</p><div class="tags"><span class="tag">Go</span><span class="tag">Persistencia políglota</span><span class="tag">React</span></div></article>
+        <article class="project"><h3>Card Payment <span class="project-type">· Frontend</span></h3><p>Sistema de procesamiento de pagos con tarjetas bancarias.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Cypress</span></div></article>
+      </section>
+    </div>
+    <footer class="footer">MATIAS MARTELLO · FULL STACK DEVELOPER · BUENOS AIRES, ARGENTINA</footer>
+  </main>
+</body>
+</html>

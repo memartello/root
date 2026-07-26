@@ -21,15 +21,6 @@ export interface ResumeContent {
   projects: { name: string; type: string; description: string; stack: string[]; link?: string }[];
 }
 
-// {
-//   Accenture: 2012-2014 Fullstack 
-//   M&G Consultores: 2014-2015 Full Stack
-//   Poder Judicial: 2015-2022 Full Stack
-//   Global Logic: 2022-2023 Frontend
-//   Stonebranch: 2023-2026 Frontend
-//   Playpeak: Actualidad
-// }
-
 export const resume: Record<Locale, ResumeContent> = {
   es: {
     meta: { title: 'root@matias-martello — Resume', description: 'Portfolio y currículum de Matias Martello.' },
@@ -38,7 +29,7 @@ export const resume: Record<Locale, ResumeContent> = {
       commandAbout: 'cat ./perfil.md', commandSkills: 'ls ./habilidades', commandExperience: 'git log --experience',
       commandEducation: 'cat ./educacion.log', commandProjects: 'find ./proyectos -maxdepth 1', contact: 'contacto',
       copyEmail: 'copiar email', copied: 'email copiado', cv: 'descargar CV', cvSoon: 'próximamente', available: 'disponible',
-      present: 'actualidad', language: 'EN', languageLabel: 'Cambiar a inglés', viewProject: 'ver proyecto', moreExperience: 'ver historial completo', closeExperience: 'ocultar historial', footer: 'Hecho con Astro · disponible en español e inglés',
+      present: 'actualidad', language: 'EN', languageLabel: 'Cambiar a inglés', viewProject: 'visitar sitio', moreExperience: 'ver historial completo', closeExperience: 'ocultar historial', footer: 'Hecho con Astro · disponible en español e inglés',
     },
     profile: { role: 'Profesional digital · Construyendo experiencias claras', intro: 'Hola!, me especializo en encontrar, entender y proponer soluciones digitales a problemas o ideas innovadoras buscando siempre la calidad, la eficiencia y la mejor experiencia para el usuario.', availability: 'Abierto a nuevas oportunidades', location: 'Argentina, Buenos Aires', email: 'matias.martello@gmail.com' },
     about: ['Durante mi carrera trabaje con metodologias agiles, involucrado en las tareas de planeamiento, administracion, refinamiento y control de tareas de projectos. Enfocado en la creacion y mantenimiento de flujos de trabajo de integracion continua y despliegue continuo, buscando calidad y minimazando fallas. Toma de decisiones de Arquitectura y Tecnologias en base al problema. Implementacion de soluciones siguiendo buenas practicas que fui refinando a lo largo de los años'],
@@ -56,14 +47,16 @@ export const resume: Record<Locale, ResumeContent> = {
       { period: '2012 — 2014', title: 'Full Stack Developer', organization: 'Accenture', location: 'Argentina', summary: 'Testing y desarrollo de aplicaciones siguiendo patrones MVC, con foco en rendimiento y bases de datos relacionales.', highlights: ['Desarrollo con C#, Windows Forms, ASP.NET, PHP, HTML y JavaScript.', 'Gestión de bases de datos relacionales y optimización de consultas SQL.'], tags: ['C#', 'ASP.NET', 'SQL'] },
     ],
     education: [
-      { period: '2014 — 2022', title: 'Ing. en sistemas / Carrera principal', organization: 'UTN FRBA', location: 'Argentina', summary: 'Ingenieria en sistemas de informacion', highlights: ['Agregar orientación, proyecto final o distinciones relevantes.'] },
-      { period: '2014', title: 'Tecnico en electronica', organization: 'PIO IX Secundario', location: 'Argentina', summary: 'Curso de ejemplo para destacar formación continua.', highlights: ['Agregar competencias y certificaciones obtenidas.'] },
+      { period: '2014 — actual', title: 'Cursos Online', organization: 'Online', location: '', summary: 'Constante evolucion en cursos de plataformas', highlights: ['AI','Networking','CI/CD',"React-Native",'Observabilidad', 'Plataformas y tecnicas de despliegue','Profiling','DB Replication Techniques','n8n'] },
+      { period: '2014 — 2022', title: 'Ing. en sistemas / Carrera principal', organization: 'UTN FRBA', location: 'Argentina', summary: 'Ingenieria en sistemas de informacion', highlights: [] },
+      { period: '2014', title: 'Tecnico en electronica', organization: 'PIO IX Secundario', location: 'Argentina', summary: 'Curso de ejemplo para destacar formación continua.', highlights: [] },
     ],
     projects: [
-      { name: 'Playpeak', type: 'Caso de estudio', description: 'Biblioteca escalable de componentes y patrones para acelerar la entrega de producto.', stack: ['Figma', 'Tokens', 'Documentación'] },
-      { name: 'MFT Managed File Transfer', type: 'SaaS', description: 'Experiencia editorial rápida y accesible construida para una audiencia bilingüe.', stack: ['Astro', 'TypeScript', 'i18n'] },
-      { name: 'Card Payment', type: 'Caso de estudio', description: 'Biblioteca escalable de componentes y patrones para acelerar la entrega de producto.', stack: ['Figma', 'Tokens', 'Documentación'] },
-      { name: 'Sistema de Gestion de causas judiciales', type: 'Producto', description: 'Interfaz para convertir datos complejos en decisiones cotidianas.', stack: ['UX', 'UI', 'Prototipo'] },
+      { name: 'Playpeak', type: 'Proyecto Personal', description: 'Aplicacion Web y Mobile para gestion de eventos deportivos', stack: ['React-Native','React','Golang','PostgreSQL'], link: 'https://app.playpeak.com.ar' },
+      { name: 'Clubik', type: 'Proyecto Personal', description: 'Aplicacion Web de reserva y administracion de canchas.', stack: ['Astro', 'React', 'Golang','PostgreSQL'], link: 'https://clubik.com.ar' },
+      { name: 'MFT Managed File Transfer', type: 'SaaS', description: 'Sistema de transferencia de archivos empresarial con encriptación y auditoría.', stack: ['Golang', 'Peristencia poligloata', 'React'] },
+      { name: 'Card Payment', type: 'FrontEnd', description: 'Sistema de procesamiento de pagos con tarjetas bancarias.', stack: ['React', 'TypeScript', 'Tailwind','Cypress'] },
+      { name: 'Sistema de Gestion de causas judiciales', type: 'Producto', description: 'Interfaz para gestionar causas judiciales.', stack: ['C#', '.Net', 'MVC','MongoDB'] },
     ],
   },
   en: {
@@ -73,14 +66,14 @@ export const resume: Record<Locale, ResumeContent> = {
       commandAbout: 'cat ./profile.md', commandSkills: 'ls ./skills', commandExperience: 'git log --experience',
       commandEducation: 'cat ./education.log', commandProjects: 'find ./projects -maxdepth 1', contact: 'contact',
       copyEmail: 'copy email', copied: 'email copied', cv: 'download CV', cvSoon: 'coming soon', available: 'available',
-      present: 'present', language: 'ES', languageLabel: 'Switch to Spanish', viewProject: 'view project', moreExperience: 'view full history', closeExperience: 'hide history', footer: 'Built with Astro · available in Spanish and English',
+      present: 'present', language: 'ES', languageLabel: 'Switch to Spanish', viewProject: 'visit site', moreExperience: 'view full history', closeExperience: 'hide history', footer: 'Built with Astro · available in Spanish and English',
     },
-    profile: { role: 'Digital professional · Building clear experiences', intro: 'Hi, I’m Matias. I design and build digital products where strategy, technology, and a thoughtful user experience meet.', availability: 'Open to new opportunities', location: 'Argentina', email: 'matias.martello@gmail.com' },
-    about: ['This space is designed like a modern terminal: direct, useful, and full of personality.', 'The following entries are editable sample content. Replace them with your real experience, education, projects, and links whenever you are ready.'],
+    profile: { role: 'Digital professional · Building clear experiences', intro: 'Hi! I specialize in identifying, understanding, and proposing digital solutions for problems and innovative ideas, always pursuing quality, efficiency, and the best possible user experience.', availability: 'Open to new opportunities', location: 'Buenos Aires, Argentina', email: 'matias.martello@gmail.com' },
+    about: ['Throughout my career, I have worked with agile methodologies, taking part in the planning, management, refinement, and tracking of project tasks. I focus on creating and maintaining continuous integration and continuous deployment workflows, pursuing quality and minimizing failures. I make architecture and technology decisions based on the problem at hand, and implement solutions following best practices that I have refined over the years.'],
     skills: [
-      { label: 'frontend', items: ['Astro', 'TypeScript', 'React', 'HTML/CSS'] },
-      { label: 'product', items: ['UX/UI', 'Design systems', 'Prototyping', 'Accessibility'] },
-      { label: 'tools', items: ['Git', 'Figma', 'Notion', 'Vercel'] },
+      { label: 'frontend', items: ['Astro', 'TypeScript', 'React', 'HTML/CSS', 'NextJS', 'React-Native', 'Expo', 'Cypress'] },
+      { label: 'backend', items: ['Go', 'NestJS', 'C# .Net Framework', 'NodeJS'] },
+      { label: 'tools', items: ['Github/Gitlab', 'BitBucket', 'Jenkins', 'Nomad', 'Grafana', 'Posthog', 'Docker', 'K8N', 'Sentry'] },
     ],
     experience: [
       { period: '2026 — present', title: 'Full Stack · Founder', organization: 'Playpeak', location: 'Argentina', summary: 'Founder and developer of a sports-management application that matches players of the same sport and streamlines court management.', highlights: ['End-to-end product design and development.', 'Features for connecting players and managing court bookings.'], tags: ['Full Stack', 'Product', 'Sport Tech'] },
@@ -91,13 +84,16 @@ export const resume: Record<Locale, ResumeContent> = {
       { period: '2012 — 2014', title: 'Full Stack Developer', organization: 'Accenture', location: 'Argentina', summary: 'Tested and developed MVC-pattern applications, with a focus on performance and relational databases.', highlights: ['Developed with C#, Windows Forms, ASP.NET, PHP, HTML, and JavaScript.', 'Managed relational databases and optimized SQL queries.'], tags: ['C#', 'ASP.NET', 'SQL'] },
     ],
     education: [
-      { period: '2018 — 2022', title: 'Bachelor’s degree / Primary studies', organization: 'Educational institution', location: 'Argentina', summary: 'Sample academic entry.', highlights: ['Add your specialization, final project, or relevant distinctions.'] },
-      { period: '2023', title: 'Specialization program', organization: 'School or platform', location: 'Online', summary: 'Sample course highlighting continuing education.', highlights: ['Add acquired skills and certifications.'] },
+      { period: '2014 — present', title: 'Online Courses', organization: 'Online', location: '', summary: 'Continuous learning through courses on online platforms.', highlights: ['AI', 'Networking', 'CI/CD', 'React-Native', 'Observability', 'Deployment platforms and techniques', 'Profiling', 'Database replication techniques','n8n'] },
+      { period: '2014 — 2022', title: 'Systems Engineering / Main Degree', organization: 'UTN FRBA', location: 'Argentina', summary: 'Information Systems Engineering.', highlights: [] },
+      { period: '2014', title: 'Electronics Technician', organization: 'PIO IX Secondary School', location: 'Argentina', summary: 'Sample course highlighting continuing education.', highlights: [] },
     ],
     projects: [
-      { name: 'Design system', type: 'Case study', description: 'A scalable library of components and patterns to speed up product delivery.', stack: ['Figma', 'Tokens', 'Documentation'] },
-      { name: 'Content platform', type: 'Web', description: 'A fast, accessible editorial experience for a bilingual audience.', stack: ['Astro', 'TypeScript', 'i18n'] },
-      { name: 'Operations dashboard', type: 'Product', description: 'An interface that turns complex data into everyday decisions.', stack: ['UX', 'UI', 'Prototype'] },
+      { name: 'Playpeak', type: 'Personal Project', description: 'Web and mobile application for managing sports events.', stack: ['React-Native', 'React', 'Golang', 'PostgreSQL'], link: 'https://app.playpeak.com.ar' },
+      { name: 'Clubik', type: 'Personal Project', description: 'Web application for booking and managing sports courts.', stack: ['Astro', 'React', 'Golang', 'PostgreSQL'], link: 'https://clubik.com.ar' },
+      { name: 'MFT Managed File Transfer', type: 'SaaS', description: 'Enterprise file-transfer system with encryption and auditing.', stack: ['Golang', 'Polyglot persistence', 'React'] },
+      { name: 'Card Payment', type: 'Frontend', description: 'Bank-card payment processing system.', stack: ['React', 'TypeScript', 'Tailwind', 'Cypress'] },
+      { name: 'Judicial Case Management System', type: 'Product', description: 'Interface for managing judicial cases.', stack: ['C#', '.Net', 'MVC', 'MongoDB'] },
     ],
   },
 };
