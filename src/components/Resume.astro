@@ -11,6 +11,7 @@ const label = (key: string) => t(key);
 const timeline = (items: TimelineItem[]) => items;
 const visibleExperience = content.experience.slice(0, 3);
 const olderExperience = content.experience.slice(3);
+const cvFile = locale === 'en' ? 'Matias-Martello-CV-EN.pdf' : 'Matias-Martello-CV-ES.pdf';
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -31,7 +32,7 @@ const olderExperience = content.experience.slice(3);
       <a href={`mailto:${content.profile.email}`}>{content.profile.email}</a>
       <span class="location">⌖ {content.profile.location}</span>
       <button class="copy-button" data-email={content.profile.email} data-copy-label={label('copyEmail')} data-copied-label={label('copied')}>{label('copyEmail')}</button>
-      <a class="cv-download" href="/cv/Matias-Martello-CV-ES.pdf" download>↓ {label('cv')}</a>
+      <a class="cv-download" href={`/cv/${cvFile}`} download>↓ {label('cv')}</a>
     </aside>
   </div>
 </section>
