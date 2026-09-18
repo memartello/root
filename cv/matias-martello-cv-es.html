@@ -43,6 +43,12 @@
     .project { padding:3.5mm 0; border-top:1px solid var(--line); } .project:first-of-type { border-top:0; padding-top:0; }
     .project h3 { margin:0; font-size:9.5pt; } .project-type { color:var(--gold); font-size:8pt; font-weight:700; } .project p { margin-top:1mm; color:#465459; }
     .footer { margin-top:8mm; padding-top:3mm; border-top:1px solid var(--line); color:var(--muted); font-size:7.5pt; letter-spacing:.04em; }
+    .page:first-of-type .sidebar .section { margin-bottom:5mm; }
+    .page:first-of-type .sidebar .summary { line-height:1.42; }
+    .page:first-of-type .sidebar .skills { gap:.8mm; }
+    .page:first-of-type .sidebar .skill { padding:.7mm 1.1mm; font-size:7.1pt; }
+    .page:first-of-type .sidebar .skill-group + .skill-group { margin-top:2.6mm; }
+    .page:first-of-type .sidebar .skill-group h3 { margin-bottom:1.4mm; }
   </style>
 </head>
 <body>
@@ -50,7 +56,7 @@
     <header class="header">
       <div>
         <h1>Matias<br>Martello</h1>
-        <p class="role">Full Stack Developer · Frontend Lead</p>
+        <p class="role">Software Engineer</p>
         <div class="contact"><span><strong>Buenos Aires, Argentina</strong></span><span>matias.martello@gmail.com</span></div>
       </div>
       <div class="photo"><img src="../assets/profile.jpeg" alt="Matias Martello"></div>
@@ -65,18 +71,18 @@
         <section class="section">
           <h2>Fortalezas</h2>
           <div class="skill-group"><h3>Frontend</h3><div class="skills"><span class="skill">React</span><span class="skill">TypeScript</span><span class="skill">Next.js</span><span class="skill">Astro</span><span class="skill">React Native</span><span class="skill">Expo</span><span class="skill">Cypress</span></div></div>
-          <div class="skill-group"><h3>Backend</h3><div class="skills"><span class="skill">Go</span><span class="skill">Node.js</span><span class="skill">NestJS</span><span class="skill">C# / .NET</span><span class="skill">SQL</span></div></div>
-          <div class="skill-group"><h3>DevOps & calidad</h3><div class="skills"><span class="skill">CI/CD</span><span class="skill">Docker</span><span class="skill">Jenkins</span><span class="skill">Nomad</span><span class="skill">Grafana</span><span class="skill">Sentry</span><span class="skill">Observabilidad</span></div></div>
+          <div class="skill-group"><h3>Backend</h3><div class="skills"><span class="skill">Go</span><span class="skill">Node.js</span><span class="skill">NestJS</span><span class="skill">C# / .NET</span><span class="skill">SQL</span><span class="skill">NoSQL</span><span class="skill">Cache DB</span><span class="skill">Graph DBs</span><span class="skill">Apache Kafka</span><span class="skill">RabbitMQ</span></div></div>
+          <div class="skill-group"><h3>Infraestructura</h3><div class="skills"><span class="skill">CI/CD</span><span class="skill">Docker</span><span class="skill">Jenkins</span><span class="skill">Nomad</span><span class="skill">Grafana</span><span class="skill">Sentry</span><span class="skill">Observabilidad</span><span class="skill">Terraform</span><span class="skill">AWS</span></div></div>
         </section>
         <section class="section">
-          <h2>Metodologías</h2>
-          <p class="summary">Agile · Arquitectura de software · Microfrontends · Diseño de APIs · Integración y despliegue continuo · Liderazgo técnico</p>
+          <h2>Habilidades blandas</h2>
+          <p class="summary">Liderazgo técnico · Colaboración entre equipos · Resolución de problemas · Comunicación clara · Autonomía · Alineación con stakeholders</p>
         </section>
       </aside>
       <section>
         <h2>Experiencia profesional</h2>
-        <article class="item"><div class="item-head"><h3>Full Stack Founder</h3><span class="period">2026 — Actualidad</span></div><p class="company">Playpeak · Argentina</p><p>Fundador y desarrollador de una aplicación de gestión deportiva que conecta jugadores del mismo deporte y facilita la administración de canchas.</p><ul><li>Diseño y desarrollo integral del producto.</li><li>Funcionalidades para conectar jugadores y gestionar reservas de canchas.</li></ul><div class="tags"><span class="tag">Full Stack</span><span class="tag">Producto</span><span class="tag">Sport Tech</span></div></article>
-        <article class="item"><div class="item-head"><h3>Frontend Lead</h3><span class="period">2023 — 2026</span></div><p class="company">Stonebranch · Remoto</p><p>Liderazgo de un equipo frontend para una solución MFT, creando herramientas específicas para usuarios finales y reduciendo la complejidad de la solución core.</p><ul><li>Experiencias para configurar y mantener nodos.</li><li>Herramientas para administrar canales de comunicación y transferencias.</li></ul><div class="tags"><span class="tag">Frontend</span><span class="tag">MFT</span><span class="tag">Liderazgo</span></div></article>
+        <article class="item"><div class="item-head"><h3>Software Engineer</h3><span class="period">2023 — 2026</span></div><p class="company">Stonebranch · Remoto</p><p>Desarrollo de una solución MFT, creando herramientas específicas para usuarios finales y reduciendo la complejidad de la solución core.</p><ul><li>Trabajo conjunto con el equipo backend en la definición técnica y funcional de nuevas funcionalidades.</li><li>Experiencias para configurar y mantener nodos.</li><li>Herramientas para administrar canales de comunicación y transferencias.</li></ul><div class="tags"><span class="tag">Software Engineering</span><span class="tag">MFT</span><span class="tag">Colaboración cross-functional</span></div></article>
+        <article class="item"><div class="item-head"><h3>Full Stack · Proyecto personal</h3><span class="period">2026 — Actualidad</span></div><p class="company">Playpeak · Argentina</p><p>Proyecto de aprendizaje continuo compuesto por tres productos deportivos interconectados mediante microservicios.</p><ul><li>Definición de la arquitectura y desarrollo end-to-end de web, mobile, servicios backend y datos.</li><li>Pipelines de CI con pruebas automatizadas, controles de calidad y análisis de seguridad para aumentar la confiabilidad y reducir la superficie de ataque.</li><li>Observabilidad centralizada y monitoreo asistido por modelos de IA de última generación.</li></ul><div class="tags"><span class="tag">Microservicios</span><span class="tag">IA</span><span class="tag">CI/CD</span><span class="tag">Observabilidad</span></div></article>
         <article class="item"><div class="item-head"><h3>Frontend Lead</h3><span class="period">2022 — 2023</span></div><p class="company">GlobalLogic · Remoto</p><p>Liderazgo de un equipo frontend en una arquitectura avanzada para un cliente de pagos de gran escala.</p><ul><li>Implementación de microfrontends para dividir el trabajo entre equipos.</li><li>Despliegue desacoplado de funcionalidades según requerimientos de negocio.</li></ul><div class="tags"><span class="tag">Microfrontends</span><span class="tag">Payments</span><span class="tag">Liderazgo</span></div></article>
       </section>
     </div>
@@ -91,19 +97,20 @@
     <div class="layout" style="min-height:0; margin-top:5mm;">
       <aside class="sidebar">
         <section class="section"><h2>Educación</h2>
-          <div class="education-item"><h3>Ingeniería en Sistemas</h3><p>UTN FRBA · 2014 — 2022</p></div>
+          <div class="education-item"><h3>Ingeniería en Sistemas</h3><p>UTN FRBA<br>Último año: cursando proyecto final.</p></div>
           <div class="education-item"><h3>Técnico en Electrónica</h3><p>PIO IX Secundario · 2014</p></div>
           <div class="education-item"><h3>Formación continua</h3><p>Cursos online desde 2014: IA, networking, CI/CD, observabilidad, profiling y técnicas de despliegue.</p></div>
         </section>
+        <section class="section"><h2>Certificaciones</h2><div class="education-item"><h3>Security+</h3><p>En curso</p></div><div class="education-item"><h3>PenTest+</h3><p>En curso</p></div></section>
       </aside>
       <section><h2>Proyectos destacados</h2>
-        <article class="project"><h3>Playpeak <span class="project-type">· Proyecto personal</span></h3><p>Aplicación web y mobile para gestión de eventos deportivos.</p><div class="tags"><span class="tag">React Native</span><span class="tag">React</span><span class="tag">Go</span><span class="tag">PostgreSQL</span></div></article>
-        <article class="project"><h3>Clubik <span class="project-type">· Proyecto personal</span></h3><p>Aplicación web para reserva y administración de canchas.</p><div class="tags"><span class="tag">Astro</span><span class="tag">React</span><span class="tag">Go</span><span class="tag">PostgreSQL</span></div></article>
+        <article class="project"><h3>Playpeak <span class="project-type">· Proyecto de aprendizaje</span></h3><p>Ecosistema de tres productos deportivos interconectados mediante microservicios, con monitoreo asistido por IA y controles de calidad y seguridad en CI.</p><div class="tags"><span class="tag">React Native</span><span class="tag">React</span><span class="tag">Go</span><span class="tag">PostgreSQL</span><span class="tag">Microservicios</span><span class="tag">IA</span><span class="tag">CI/CD</span></div></article>
+        <article class="project"><h3>Coiron MPF <span class="project-type">· Producto</span></h3><p>Software de administración y gestión de causas judiciales con interconexión de personas y elementos mediante una base de datos de grafos.</p><div class="tags"><span class="tag">C#</span><span class="tag">React</span><span class="tag">SQL</span><span class="tag">Neo4j</span><span class="tag">Elasticsearch</span></div></article>
         <article class="project"><h3>MFT Managed File Transfer <span class="project-type">· SaaS</span></h3><p>Sistema empresarial de transferencia de archivos con encriptación y auditoría.</p><div class="tags"><span class="tag">Go</span><span class="tag">Persistencia políglota</span><span class="tag">React</span></div></article>
         <article class="project"><h3>Card Payment <span class="project-type">· Frontend</span></h3><p>Sistema de procesamiento de pagos con tarjetas bancarias.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Cypress</span></div></article>
       </section>
     </div>
-    <footer class="footer">MATIAS MARTELLO · FULL STACK DEVELOPER · BUENOS AIRES, ARGENTINA</footer>
+    <footer class="footer">MATIAS MARTELLO · SOFTWARE ENGINEER · BUENOS AIRES, ARGENTINA</footer>
   </main>
 </body>
 </html>
